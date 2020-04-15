@@ -10,7 +10,9 @@ def get_html(site):
 def get_page_data(html):
     soup = BeautifulSoup(html, 'lxml')
     line = soup.find('table', id='theProxyList').find('tbody').find_all('tr')
-
+    
+    open('proxy.txt', 'w').close()
+    
     for tr in line:
         td = tr.find_all('td')
         ip = td[1].text
