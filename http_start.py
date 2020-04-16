@@ -30,7 +30,7 @@ def start_get(url):
 		try:
 			requests.get(url)
 		except:
-			passs
+			pass
 
 
 def thread_get(thread):
